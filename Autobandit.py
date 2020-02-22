@@ -20,7 +20,6 @@ kopierBandit = driver.find_elements_by_class_name("bbVIQb")
 
 
 Tekst = kopierBandit[0].text + '\n' + kopierBandit[1].text
-print(Tekst)
 
 translateside = driver.find_element_by_class_name('gLFyf.gsfi')
 translateside.send_keys(Keys.CONTROL + 'a')
@@ -29,6 +28,14 @@ translateside.send_keys(Keys.DELETE)
 time.sleep(1)
 
 translateside.send_keys("google translate" + (Keys.ENTER))
+
+finddansk1 = driver.find_element_by_xpath('//*[@id="tw-tl"]')
+finddansk1.click()
+
+finddansk2 = driver.find_element_by_xpath('//*[@id="tl_list-search-box"]')
+
+finddansk2.send_keys("da" + (Keys.ENTER))
+
 
 translater = driver.find_element_by_xpath('//*[@id="tw-source-text-ta"]')
 
